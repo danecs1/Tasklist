@@ -1,8 +1,10 @@
 import express from 'express';
 import logger from 'morgan';
+import cors from 'cors';
 import { router } from '../backend/routes';
 
 const app = express();
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 
